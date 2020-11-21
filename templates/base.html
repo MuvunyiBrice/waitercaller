@@ -30,10 +30,14 @@ initial-scale=1">
 {% block navbar %}
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/dashboard">Dashboard</a>
-            <a class="navbar-brand" href="/account">Account</a>
-            <a class="navbar-brand navbar-right" href="/logout">Logout</a>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a class="navbar-brand" href="/dashboard">Dashboard</a></li>
+                <li><a class="navbar-brand" href="/account">Account</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="navbar-brand" href="/logout">Logout</a></li>
+            </ul>
         </div>
     </div>
 </nav>
