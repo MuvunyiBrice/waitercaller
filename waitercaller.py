@@ -102,7 +102,7 @@ def register():
             form.email.errors.append("Email address already registered")
             return render_template("home.html", loginform=LoginForm(), registrationform=form)
         hashed = PH.hash_password(form.password2.data)
-        DB.add_user(form.email.data, hashed)
+        DB.add_user(form.email.data, form.gender.data, hashed)
         return render_template("home.html",
                                loginform=LoginForm(),
                                registrationform=form,
