@@ -89,9 +89,9 @@ def dashboard_resolve():
 @app.route("/newrequest/<tid>")
 def new_request(tid):
     if DB.add_request(tid, datetime.datetime.now()):
-        return "Your request has been logged and a waiter will be with you shortly"
+        return "<h3>Your request has been logged and a waiter will be with you shortly</h3>"
 
-    return "There is already a request pending for this table. Please be patient, a waiter will be there ASAP"
+    return "<h3>There is already a request pending for this table. Please be patient, a waiter will be there ASAP</h3>"
 
 
 @app.route("/register", methods=["POST"])
