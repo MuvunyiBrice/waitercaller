@@ -85,6 +85,15 @@
                 </div>
                 <div class="form-group">
                     <div class="col-sm-9">
+                        <label for="gen">Select gender:</label>
+                        <select class="form-control" id="gen">
+                            <option>MALE</option>
+                            <option>FEMALE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9">
                         {% if registrationform.password.errors %}
                         <ul class="errors">{% for error in
                             registrationform.password.errors %}

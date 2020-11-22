@@ -12,6 +12,7 @@ class RegistrationForm(Form):
     password2 = PasswordField('password2',
                               validators=[validators.DataRequired(),
                                           validators.EqualTo('password', message='Passwords must match')])
+    gender = StringField('gender')
     submit = SubmitField('submit', [validators.DataRequired()])
 
 

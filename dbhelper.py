@@ -12,8 +12,8 @@ class DBHelper:
     def get_user(self, email):
         return self.db.users.find_one({"email": email})
 
-    def add_user(self, email, hashed):
-        self.db.users.insert({"email": email, "hashed": hashed})
+    def add_user(self, email, gender, hashed):
+        self.db.users.insert({"email": email, "gender": gender, "hashed": hashed})
 
     def add_table(self, number, owner):
         new_id = self.db.tables.insert({"number": number, "owner": owner})

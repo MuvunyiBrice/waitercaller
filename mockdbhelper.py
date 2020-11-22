@@ -16,8 +16,8 @@ class MockDBHelper:
             return user[0]
         return None
 
-    def add_user(self, email, hashed):
-        MOCK_USERS.append({"email": email, "hashed": hashed})
+    def add_user(self, email, gender, hashed):
+        MOCK_USERS.append({"email": email, "gender": gender, hashed: "hashed"})
 
     def add_table(self, number, owner):
         MOCK_TABLES.append({"_id": number, "number": number, "owner": owner})
