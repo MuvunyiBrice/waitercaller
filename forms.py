@@ -1,6 +1,8 @@
 from flask_wtf import Form
-from wtforms import PasswordField, SubmitField, validators, StringField
+from wtforms import PasswordField, SubmitField, validators, StringField, SelectField
 from wtforms.fields.html5 import EmailField
+
+GENDER_CHOICE = ['MALE', 'FEMALE']
 
 
 class RegistrationForm(Form):
@@ -12,7 +14,8 @@ class RegistrationForm(Form):
     password2 = PasswordField('password2',
                               validators=[validators.DataRequired(),
                                           validators.EqualTo('password', message='Passwords must match')])
-    gender = StringField('gender')
+
+    gender = SelectField(label='GENDER', choices=GENDER_CHOICE)
     submit = SubmitField('submit', [validators.DataRequired()])
 
 
